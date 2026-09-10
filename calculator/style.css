@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0e5ec;
+    font-family: 'Poppins', sans-serif;
+}
+.calculator {
+    width: 320px;
+    padding: 20px;
+    background: #e0e5ec;
+    border-radius: 20px;
+    box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5);
+}
+.display {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
+    background: #e0e5ec;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 2rem;
+    color: #4d4d4d;
+    box-shadow: inset 6px 6px 10px 0 rgba(163,177,198, 0.5), inset -6px -6px 10px 0 rgba(255,255,255, 0.5);
+    overflow: hidden;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background: #e0e5ec;
+    font-size: 1.2rem;
+    color: #4d4d4d;
+    cursor: pointer;
+    box-shadow: 6px 6px 10px rgba(163,177,198,0.6), -6px -6px 10px rgba(255,255,255, 0.5);
+    transition: all 0.2s ease-in-out;
+}
+button:active {
+    box-shadow: inset 4px 4px 6px rgba(163,177,198, 0.5), inset -4px -4px 6px rgba(255,255,255, 0.5);
+}
+button.operator {
+    color: #ff3366;
+    font-weight: 600;
+}
+button.equals {
+    width: 135px;
+    border-radius: 30px;
+    grid-column: span 2;
+    background: #ff3366;
+    color: white;
+    box-shadow: 4px 4px 8px rgba(255, 51, 102, 0.4), -4px -4px 8px rgba(255, 255, 255, 0.5);
+}
+button.equals:active {
+    box-shadow: inset 4px 4px 6px rgba(200, 30, 70, 0.8);
+}
